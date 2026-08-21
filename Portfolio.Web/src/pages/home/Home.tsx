@@ -9,6 +9,8 @@ const Home = () => {
         <>
             <Navbar />
             <div className={styles.topSection}>
+                <div className={styles.topSectionMobile}>
+
                 <div className={styles.topSectionContainer}>
                     <div className={styles.topSectionContent}>
                         <section className={styles.introWrapper}>
@@ -18,6 +20,7 @@ const Home = () => {
                             <div><button>About me</button></div>
                         </section>
                     </div>
+                </div>
                 </div>
             </div>
         </>

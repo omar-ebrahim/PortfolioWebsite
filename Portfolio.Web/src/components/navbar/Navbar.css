@@ -67,7 +67,7 @@
 .bar {
   width: 25px;
   height: 3px;
-  background-color: #333;
+  background-color: var(--logo-color);
   transition: 0.5s;
 }
 
@@ -81,13 +81,18 @@
     flex-direction: column;
     background-color: #333;
     padding: 1rem 2rem;
-    display: none;
 
-    & > li:hover {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+
+    &>li:hover {
       border-bottom-color: var(--link-hover-border);
     }
 
-    & > li a {
+    &>li a {
       color: var(--link-color);
 
       &:hover {
@@ -97,7 +102,10 @@
   }
 
   .nav-links.active {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
   }
 
   .hamburger {
