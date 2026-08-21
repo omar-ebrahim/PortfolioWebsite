@@ -1,14 +1,12 @@
 .topSection {
     box-sizing: border-box;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 700px;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
         url('../../assets/images/home.jpg');
-
-    /* This section needs to be clear of the nabar */
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding-top: 7rem;
 
     @media screen and (max-width: 768px) {
@@ -21,16 +19,12 @@
 }
 
 .topSectionMobile {
-    height: 100%;
     width: 100%;
+    height: 100%;
     background: transparent;
 
-    @media (max-width: 768px) {
-
-        /* From https://css.glass */
-        /* From https://css.glass */
+    @media screen and (max-width: 768px) {
         background: rgba(255, 255, 255, 0.05);
-        border-radius: 0;
         backdrop-filter: blur(3.2px);
         -webkit-backdrop-filter: blur(3.2px);
     }
@@ -41,25 +35,24 @@
 }
 
 .topSectionContainer {
-    width: 100%;
     height: 100%;
+    width: 100%;
 }
 
 .topSectionContent {
     height: 100%;
-    min-width: 0;
     width: 70%;
+    min-width: 0;
 
     @media screen and (max-width: 768px) {
         width: 100%;
     }
-
 }
 
 .nameWrapper {
     font-size: 80px;
-    align-items: flex-start;
     font-weight: bold;
+    align-items: flex-start;
 
     @media screen and (max-width: 768px) {
         display: flex;
@@ -77,33 +70,29 @@
     padding: 3em 5em;
     grid-template-rows: 1fr 3fr 1fr auto;
 
-    &>div:nth-child(1) {
+    & > div:nth-child(1) {
         color: var(--intro-font-primary);
     }
 
-    &>div:nth-child(2) {
+    & > div:nth-child(2) {
         color: var(--intro-font-primary);
-        /* display: flex; */
-        /* flex-wrap: wrap; */
         gap: 0.2em;
-        /* align-content: flex-start; */
 
-        &>.name {
+        & > .name {
             color: var(--intro-font-secondary);
             text-transform: capitalize;
         }
-
     }
 
-    &>div:nth-child(3) {
+    & > div:nth-child(3) {
         color: var(--intro-font-primary);
     }
 
-    &>div:nth-child(4) {
+    & > div:nth-child(4) {
         color: var(--intro-font-primary);
     }
 
-    &>div>button {
+    & > div > button {
         color: black;
         font-size: inherit;
         background-color: var(--intro-font-secondary);
@@ -117,8 +106,8 @@
         }
     }
 
-    @media screen and (max-width: 768px){
-        padding: 2em
+    @media screen and (max-width: 768px) {
+        padding: 2em;
     }
 }
 
