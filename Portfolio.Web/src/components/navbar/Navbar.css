@@ -6,12 +6,15 @@
 }
 
 .navbar {
-  background-color: transparent;
+  background: transparent;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   text-transform: lowercase;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-radius: 0;
 }
 
 .navbar-container {
@@ -20,6 +23,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    padding: 1rem;
+  }
 }
 
 .logo {
