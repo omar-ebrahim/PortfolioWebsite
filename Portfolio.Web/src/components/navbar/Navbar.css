@@ -13,12 +13,43 @@
     z-index: 1000;
     text-transform: lowercase;
     border-radius: 0;
-    background: rgba(255, 255, 255, 0.1);
+    background: transparent;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
 }
 
+@media screen and (max-width: 768px) {
+    .navbar::before {
+        content: '';
+        position: absolute;
+        inset: 0 0 -50px;
+        pointer-events: none;
+        background: linear-gradient(
+            to bottom,
+            rgba(31, 29, 29, 0.7) 0%,
+            rgba(31, 29, 29, 0.55) 50%,
+            transparent 100%
+        );
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        mask-image: linear-gradient(
+            to bottom,
+            black 0%,
+            black 50%,
+            transparent 100%
+        );
+        -webkit-mask-image: linear-gradient(
+            to bottom,
+            black 0%,
+            black 50%,
+            transparent 100%
+        );
+    }
+}
+
 .navbar-container {
+    position: relative;
+    z-index: 1;
     margin: auto;
     padding: 1rem 5rem;
     display: flex;

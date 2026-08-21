@@ -10,7 +10,7 @@
         position: absolute;
         inset: -20px;
         background-image:
-            linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+            linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)),
             url('../../assets/images/home.jpg');
         background-position: top;
         background-repeat: no-repeat;
@@ -18,19 +18,6 @@
         filter: blur(5px);
         z-index: 0;
     }
-    /* box-sizing: border-box;
-    height: 700px;
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-        url('../../assets/images/home.jpg');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 7rem;
-
-    @media screen and (max-width: 768px) {
-        padding-top: 5rem;
-    } */
 }
 
 .salutation {
