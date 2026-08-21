@@ -125,10 +125,6 @@
         opacity: 0;
         visibility: hidden;
         transform: translateY(-10px);
-        transition:
-            opacity 0.3s ease,
-            transform 0.3s ease,
-            visibility 0.3s ease;
 
         & > li:hover {
             border-bottom-color: var(--link-hover-border);
@@ -148,6 +144,10 @@
         visibility: visible;
         pointer-events: auto;
         transform: translateY(0);
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease,
+            visibility 0.3s ease;
     }
 
     .hamburger {
