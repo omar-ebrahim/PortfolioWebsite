@@ -1,5 +1,5 @@
-import { useState } from "react"
-import "./Navbar.css"
+import { useState } from 'react';
+import './Navbar.css';
 
 interface NavbarLink {
     name: string;
@@ -21,7 +21,10 @@ const Navbar = () => {
                 <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
                     {navLinks.map((link) => (
                         <li key={link.name}>
-                            <a href={link.path} onClick={() => setIsOpen(false)}>
+                            <a
+                                href={link.path}
+                                onClick={() => setIsOpen(false)}
+                            >
                                 {link.name}
                             </a>
                         </li>
