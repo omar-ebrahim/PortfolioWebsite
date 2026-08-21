@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Navbar.css';
 
 interface NavbarLink {
@@ -14,6 +14,21 @@ const Navbar = () => {
         { name: 'Services', path: '#services' },
         { name: 'Contact', path: '#contact' },
     ];
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(min-width: 769px)');
+
+        const resetMenu = () => {
+            setIsOpen(false);
+        };
+
+        mediaQuery.addEventListener('change', resetMenu);
+
+        return () => {
+            mediaQuery.removeEventListener('change', resetMenu);
+        };
+    }, []);
+
     return (
         <nav className="navbar">
             <div className="navbar-container">
