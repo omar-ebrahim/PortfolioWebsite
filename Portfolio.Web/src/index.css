@@ -1,61 +1,61 @@
 :root {
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+    --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+    --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+    --mono: ui-monospace, Consolas, monospace;
 
-  --intro-font-primary: #fff;
-  --intro-font-secondary:  rgb(11, 196, 196);
+    --intro-font-primary: #fff;
+    --intro-font-secondary: rgb(11, 196, 196);
 
-  --button-hover: rgb(7, 140, 140);
+    --button-hover: rgb(7, 140, 140);
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font: 18px/145% var(--sans);
+    letter-spacing: 0.18px;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+    @media (max-width: 1024px) {
+        font-size: 16px;
+    }
 }
 
 body {
-  margin: 0;
-  background-color: rgb(31, 29, 29);
+    margin: 0;
+    background-color: rgb(31, 29, 29);
 }
 
 h1,
 h2 {
-  font-family: var(--heading);
-  font-weight: 500;
+    font-family: var(--heading);
+    font-weight: 500;
 }
 
 h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
+    font-size: 56px;
+    letter-spacing: -1.68px;
 
-  @media (max-width: 1024px) {
-    font-size: 36px;
-  }
+    @media (max-width: 1024px) {
+        font-size: 36px;
+    }
 }
 
 h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
+    font-size: 24px;
+    line-height: 118%;
+    letter-spacing: -0.24px;
 
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
+    @media (max-width: 1024px) {
+        font-size: 20px;
+    }
 }
 
 code,
 .counter {
-  font-family: var(--mono);
+    font-family: var(--mono);
 }
 
 code {
-  font-size: 15px;
-  line-height: 135%;
+    font-size: 15px;
+    line-height: 135%;
 }
