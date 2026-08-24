@@ -32,7 +32,7 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="navbar-container">
-                <h1 className="logo">RyanBurnsBuildSolutions</h1>
+                <h1 className="logo">Route26 Cycle Repair</h1>
                 <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
                     {navLinks.map((link) => (
                         <li key={link.name}>
