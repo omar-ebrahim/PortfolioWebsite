@@ -1,26 +1,28 @@
 import { useEffect, useState } from 'react';
-import './Navbar.css';
+import './Navbar.scss';
+import { navigateToSection, type SectionId } from '../../utils/utils';
 
 interface NavbarLink {
     name: string;
     path: string;
+    sectionId: SectionId;
 }
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const navLinks: NavbarLink[] = [
-        { name: 'Home', path: '#' },
-        { name: 'About', path: '#about' },
-        { name: 'Services', path: '#services' },
-        { name: 'Contact', path: '#contact' },
+        { name: 'Home', path: '#', sectionId: 'home' },
+        { name: 'About', path: '#about', sectionId: 'aboutme' },
+        { name: 'Services', path: '#services', sectionId: 'services' },
+        { name: 'Contact', path: '#contact', sectionId: 'contact' },
     ];
+
+    const resetMenu = () => {
+        setIsOpen(false);
+    };
 
     useEffect(() => {
         const mediaQuery = window.matchMedia('(min-width: 769px)');
-
-        const resetMenu = () => {
-            setIsOpen(false);
-        };
 
         mediaQuery.addEventListener('change', resetMenu);
 
@@ -36,12 +38,14 @@ const Navbar = () => {
                 <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
                     {navLinks.map((link) => (
                         <li key={link.name}>
-                            <a
-                                href={link.path}
-                                onClick={() => setIsOpen(false)}
+                            <span
+                                onClick={() => {
+                                    navigateToSection(link.sectionId);
+                                    resetMenu();
+                                }}
                             >
                                 {link.name}
-                            </a>
+                            </span>
                         </li>
                     ))}
                 </ul>

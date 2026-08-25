@@ -1,8 +1,10 @@
+import { navigateToSection } from '../../../../utils/utils';
 import styles from './TopSection.module.scss';
 
 const TopSection = () => {
     const jobs = ['servicing', 'maintenence', 'bike builds'];
     const name = 'Omar';
+
     return (
         <div className={styles.topSection}>
             <div className={styles.topSectionMobile}>
@@ -20,7 +22,11 @@ const TopSection = () => {
                                 ))}
                             </div>
                             <div>
-                                <button>About me</button>
+                                <button
+                                    onClick={() => navigateToSection('aboutme')}
+                                >
+                                    About me
+                                </button>
                             </div>
                         </section>
                     </div>

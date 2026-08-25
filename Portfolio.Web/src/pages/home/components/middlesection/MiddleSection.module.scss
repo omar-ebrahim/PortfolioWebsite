@@ -1,6 +1,9 @@
 .heading {
-    padding: 2rem 5rem 1rem 5rem;
+    padding: 2rem 5rem 2rem 0rem;
     color: var(--font-header);
+    font-size: 48px;
+    font-weight: 700;
+    scroll-margin-top: 7rem;
 }
 
 .content {
@@ -24,7 +27,7 @@
 
 @media (max-width: 768px) {
     .heading {
-        padding: 2rem 2rem 1rem 2rem;
+        padding: 2rem 2rem 2rem 0rem;
     }
 
     .content {

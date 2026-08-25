@@ -5,14 +5,15 @@ import Bicycle from '../../../../components/glyphs/Bicycle';
 const MiddleSection = () => {
     return (
         <div>
-            <div className={styles.heading}>About me</div>
             <div className={styles.content}>
                 <div className={styles.leftContent}>
+                    <div id="aboutme" className={styles.heading}>
+                        About me
+                    </div>
                     {middleSectionJson.intro}
                 </div>
                 <div className={styles.rightContent}>
-                    {/* <img src={BikeSvg} /> */}
-                    <Bicycle className={styles.glyph} size={256} />
+                    <Bicycle className={styles.glyph} size={196} />
                 </div>
             </div>
         </div>
