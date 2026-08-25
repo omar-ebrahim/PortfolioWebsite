@@ -1,5 +1,7 @@
+@use '../../../../styles/theme' as theme;
+
 .sectionWrapper {
-    scroll-margin-top: 7rem;
+    scroll-margin-top: theme.$navbar-height;
 }
 
 .heading {
@@ -28,7 +30,7 @@
     align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: theme.$mobile-breakpoint) {
     .heading {
         padding: 2rem 2rem 2rem 0rem;
     }

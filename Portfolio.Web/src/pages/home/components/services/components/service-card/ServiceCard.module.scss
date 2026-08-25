@@ -1,9 +1,11 @@
+@use '../../../../../../styles/theme' as theme;
+
 .card {
     width: 100%;
     min-width: 0;
     max-width: 350px;
     min-height: 180px;
-    padding: 1.5rem;
+    padding: var(--space-md);
     box-sizing: border-box;
 
     color: var(--font-body);
@@ -20,7 +22,7 @@
     margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: theme.$mobile-breakpoint) {
     .card {
         width: 100%;
         padding: 1rem;

@@ -1,9 +1,11 @@
+@use '../../../../styles/theme' as theme;
+
 .heading {
     padding: 0rem 5rem 2rem 0rem;
     color: var(--font-header);
     font-size: 48px;
     font-weight: 700;
-    scroll-margin-top: 7rem;
+    scroll-margin-top: theme.$navbar-height;
 }
 
 .content {
@@ -31,7 +33,7 @@
     box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
+@media (max-width: theme.$mobile-breakpoint) {
     .heading {
         padding: 2rem 2rem 2rem 0rem;
     }
