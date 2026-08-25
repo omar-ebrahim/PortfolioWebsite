@@ -4,6 +4,8 @@
     box-sizing: border-box;
     height: 700px;
     padding-top: 7rem;
+    margin: 0;
+    border: 0;
 
     &::before {
         content: '';
@@ -11,7 +13,7 @@
         inset: -20px;
         background-image:
             linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)),
-            url('../../assets/images/homepage_bike.jpg');
+            url('../../../../assets/images/homepage_bike.jpg');
         background-position: top;
         background-repeat: no-repeat;
         background-size: cover;
@@ -124,22 +126,27 @@
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
+    width: 100%;
+    gap: 0 1rem;
+
+    /* From https://css.glass */
 }
 
 .jobItem {
+    --blur: 9px;
+
     flex: 0 0 auto;
     display: flex;
     align-items: center;
     border-right: 1px solid transparent;
-    border-right-color: var(--intro-font-secondary);
+    // border-right-color: var(--intro-font-secondary);
     padding: 0.5em 2em;
     cursor: default;
 
-    &:first-of-type {
-        padding-left: 0;
-    }
+    background: rgba(0, 255, 255, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: blur(var(--blur));
 
-    &:last-of-type {
-        border-right-color: transparent;
-    }
+    margin-bottom: 1rem;
 }

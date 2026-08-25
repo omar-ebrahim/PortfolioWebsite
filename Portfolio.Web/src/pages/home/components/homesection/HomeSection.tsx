@@ -1,10 +1,12 @@
-import styles from '../Home.module.css';
+import { navigateToSection, sectionIds } from '../../../../utils/utils';
+import styles from './HomeSection.module.scss';
 
 const TopSection = () => {
     const jobs = ['servicing', 'maintenence', 'bike builds'];
     const name = 'Omar';
+
     return (
-        <div className={styles.topSection}>
+        <div id={sectionIds.home} className={styles.topSection}>
             <div className={styles.topSectionMobile}>
                 <div className={styles.topSectionContainer}>
                     <div className={styles.topSectionContent}>
@@ -16,11 +18,20 @@ const TopSection = () => {
                             </div>
                             <div className={styles.jobItemWrapper}>
                                 {jobs.map((x) => (
-                                    <span className={styles.jobItem}>{x}</span>
+                                    <span
+                                        key={`ji_${x}`}
+                                        className={styles.jobItem}
+                                    >
+                                        {x}
+                                    </span>
                                 ))}
                             </div>
                             <div>
-                                <button>About me</button>
+                                <button
+                                    onClick={() => navigateToSection('aboutme')}
+                                >
+                                    About me
+                                </button>
                             </div>
                         </section>
                     </div>

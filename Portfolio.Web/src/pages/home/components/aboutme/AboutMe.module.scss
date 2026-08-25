@@ -1,0 +1,54 @@
+.sectionWrapper {
+    scroll-margin-top: 7rem;
+}
+
+.heading {
+    padding: 2rem 5rem 2rem 0rem;
+    color: var(--font-header);
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.content {
+    color: var(--font-body);
+    display: flex;
+    width: 100%;
+    white-space: pre-line;
+}
+
+.leftContent {
+    padding: 1rem 5rem;
+    width: 60%;
+}
+
+.rightContent {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .heading {
+        padding: 2rem 2rem 2rem 0rem;
+    }
+
+    .content {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .leftContent,
+    .rightContent {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 0 2rem 1rem;
+    }
+}
+
+.glyph {
+    color: var(--intro-font-secondary);
+    margin: 0 auto;
+    padding-bottom: 4rem;
+}
