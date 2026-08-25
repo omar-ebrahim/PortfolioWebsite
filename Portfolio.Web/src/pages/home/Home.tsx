@@ -1,5 +1,5 @@
 import Navbar from '../../components/navbar/Navbar';
-import MiddleSection from './components/middlesection/MiddleSection';
+import AboutMe from './components/aboutme/AboutMe';
 import TopSection from './components/topsection/TopSection';
 
 const Home = () => {
@@ -7,7 +7,7 @@ const Home = () => {
         <>
             <Navbar />
             <TopSection />
-            <MiddleSection />
+            <AboutMe />
         </>
     );
 };
