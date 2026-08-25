@@ -1,12 +1,12 @@
-import { navigateToSection } from '../../../../utils/utils';
-import styles from './TopSection.module.scss';
+import { navigateToSection, sectionIds } from '../../../../utils/utils';
+import styles from './HomeSection.module.scss';
 
 const TopSection = () => {
     const jobs = ['servicing', 'maintenence', 'bike builds'];
     const name = 'Omar';
 
     return (
-        <div className={styles.topSection}>
+        <div id={sectionIds.home} className={styles.topSection}>
             <div className={styles.topSectionMobile}>
                 <div className={styles.topSectionContainer}>
                     <div className={styles.topSectionContent}>

@@ -1,12 +1,12 @@
 import Navbar from '../../components/navbar/Navbar';
 import AboutMe from './components/aboutme/AboutMe';
-import TopSection from './components/topsection/TopSection';
+import HomeSection from './components/homesection/HomeSection';
 
 const Home = () => {
     return (
         <>
             <Navbar />
-            <TopSection />
+            <HomeSection />
             <AboutMe />
         </>
     );
