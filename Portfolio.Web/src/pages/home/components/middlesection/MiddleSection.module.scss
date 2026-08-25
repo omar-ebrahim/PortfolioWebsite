@@ -17,6 +17,9 @@
 
 .rightContent {
     width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -36,4 +39,10 @@
         box-sizing: border-box;
         padding: 0 2rem 1rem;
     }
+}
+
+.glyph {
+    color: var(--intro-font-secondary);
+    margin: 0 auto;
+    padding-bottom: 4rem;
 }
