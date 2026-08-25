@@ -1,0 +1,36 @@
+.heading {
+    padding: 2rem 5rem 1rem 5rem;
+    color: var(--font-header);
+}
+
+.content {
+    color: var(--font-body);
+    display: flex;
+    width: 100%;
+    white-space: pre-line;
+}
+
+.leftContent {
+    padding: 1rem 5rem;
+    width: 60%;
+}
+
+.rightContent {
+    width: 40%;
+}
+
+@media (max-width: 768px) {
+    .heading {
+        padding: 2rem 2rem 1rem 2rem;
+    }
+
+    .content {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .leftContent,
+    .rightContent {
+        padding: 0 2rem 1rem 2rem;
+    }
+}

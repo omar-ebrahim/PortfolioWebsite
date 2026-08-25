@@ -1,0 +1,145 @@
+.topSection {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 700px;
+    padding-top: 7rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: -20px;
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)),
+            url('../../assets/images/homepage_bike.jpg');
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(3px);
+        z-index: 0;
+    }
+}
+
+.salutation {
+    font-size: 1.5rem;
+}
+
+.topSectionMobile {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.overlay {
+    background-color: gray;
+}
+
+.topSectionContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.topSectionContent {
+    height: 100%;
+    width: 70%;
+    min-width: 0;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.nameWrapper {
+    font-size: 80px;
+    font-weight: bold;
+    align-items: flex-start;
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+        min-height: min-content;
+    }
+}
+
+.introWrapper {
+    box-sizing: border-box;
+    height: 100%;
+    display: grid;
+    margin: 0;
+    padding: 3em 5em;
+    grid-template-rows: 1fr 3fr 1fr auto;
+
+    & > div:nth-child(1) {
+        color: var(--intro-font-primary);
+    }
+
+    & > div:nth-child(2) {
+        color: var(--intro-font-primary);
+        gap: 0.2em;
+
+        & > .name {
+            padding-left: 0.5rem;
+            color: var(--intro-font-secondary);
+            text-transform: capitalize;
+
+            @media (max-width: 768px) {
+                padding-left: 0;
+            }
+        }
+    }
+
+    & > div:nth-child(3) {
+        color: var(--intro-font-primary);
+    }
+
+    & > div:nth-child(4) {
+        color: var(--intro-font-primary);
+    }
+
+    & > div > button {
+        color: black;
+        font-size: inherit;
+        background-color: var(--intro-font-secondary);
+        text-decoration: none;
+        border: none;
+        width: 150px;
+        height: 50px;
+
+        &:hover {
+            background-color: var(--button-hover);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 2em;
+    }
+}
+
+.jobItemWrapper {
+    box-sizing: border-box;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.jobItem {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid transparent;
+    border-right-color: var(--intro-font-secondary);
+    padding: 0.5em 2em;
+    cursor: default;
+
+    &:first-of-type {
+        padding-left: 0;
+    }
+
+    &:last-of-type {
+        border-right-color: transparent;
+    }
+}
