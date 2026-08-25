@@ -1,9 +1,11 @@
+@use '../../../../styles/theme' as theme;
+
 .topSection {
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
     height: 700px;
-    padding-top: 7rem;
+    padding-top: theme.$navbar-height;
     margin: 0;
     border: 0;
 
@@ -48,7 +50,7 @@
     width: 70%;
     min-width: 0;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: theme.$mobile-breakpoint) {
         width: 100%;
     }
 }
@@ -58,7 +60,7 @@
     font-weight: bold;
     align-items: flex-start;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: theme.$mobile-breakpoint) {
         display: flex;
         flex-direction: column;
         line-height: 1.2;
@@ -87,7 +89,7 @@
             color: var(--intro-font-secondary);
             text-transform: capitalize;
 
-            @media (max-width: 768px) {
+            @media (max-width: theme.$mobile-breakpoint) {
                 padding-left: 0;
             }
         }
@@ -115,7 +117,7 @@
         }
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: theme.$mobile-breakpoint) {
         padding: 2em;
     }
 }

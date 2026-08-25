@@ -1,12 +1,7 @@
-:root {
-    --logo-color: #c4b8b8;
-    --link-color: #fff;
-    --link-hover: rgb(11, 196, 196);
-    --link-hover-border: rgb(12, 244, 244);
-}
+@use '../../styles/theme' as theme;
 
 .navbar {
-    height: 7rem;
+    height: theme.$navbar-height;
     position: fixed;
     top: 0;
     left: 0;
@@ -58,14 +53,14 @@
     justify-content: space-between;
     align-items: center;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: theme.$mobile-breakpoint) {
         padding: 1rem;
     }
 }
 
 .logo {
     font-size: 1.5rem;
-    color: var(--logo-color);
+    color: var(--color-logo);
     font-weight: bold;
     text-transform: none;
 }
@@ -78,7 +73,7 @@
 
 .nav-links li {
     text-decoration: none;
-    color: var(--link-color);
+    color: var(--color-white);
     opacity: 0.8;
     font-size: 1rem;
     transition: 0.9s ease;
@@ -90,12 +85,12 @@
     transition: border-color 0.5s ease;
 
     &:hover {
-        border-bottom-color: var(--link-hover-border);
+        border-bottom-color: var(--color-accent-border);
     }
 }
 
 .nav-links li a:hover {
-    color: var(--link-hover);
+    color: var(--color-accent);
     opacity: 1;
 }
 
@@ -109,19 +104,19 @@
 .bar {
     width: 25px;
     height: 3px;
-    background-color: var(--logo-color);
+    background-color: var(--color-logo);
     transition: 0.5s;
 }
 
 /* Mobile styles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: theme.$mobile-breakpoint) {
     .nav-links {
         position: absolute;
         top: 60px;
         left: 0;
         right: 0;
         flex-direction: column;
-        background-color: #333;
+        background-color: var(--color-overlay);
         padding: 1rem 2rem;
 
         display: flex;
@@ -130,14 +125,14 @@
         transform: translateY(-10px);
 
         & > li:hover {
-            border-bottom-color: var(--link-hover-border);
+            border-bottom-color: var(--color-accent-border);
         }
 
         & > li a {
-            color: var(--link-color);
+            color: var(--color-white);
 
             &:hover {
-                color: var(--link-hover);
+                color: var(--color-accent);
             }
         }
     }
