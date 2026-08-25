@@ -24,9 +24,9 @@
 .rightContent {
     width: 70%;
     display: grid;
-    grid-template-columns: repeat(2, 350px);
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 350px));
     justify-content: center;
-    gap: 1.5rem 1rem;
+    gap: 1.5rem;
     padding-right: 2rem;
     box-sizing: border-box;
 }

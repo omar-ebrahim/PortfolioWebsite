@@ -21,6 +21,16 @@ const Services = () => {
                         price={12.345}
                         title="service"
                     />
+                    <ServiceCard
+                        description="something"
+                        price={12.345}
+                        title="service"
+                    />
+                    <ServiceCard
+                        description="something"
+                        price={12.345}
+                        title="service"
+                    />
                 </div>
             </div>
         </div>
