@@ -9,6 +9,9 @@
     height: 7rem;
     position: fixed;
     top: 0;
+    left: 0;
+    margin: 0;
+    border: 0;
     width: 100%;
     z-index: 1000;
     text-transform: lowercase;
@@ -20,6 +23,7 @@
 
 .navbar::before {
     content: '';
+    top: -1px;
     position: absolute;
     inset: 0 0 -50px;
     pointer-events: none;

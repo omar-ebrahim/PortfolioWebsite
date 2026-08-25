@@ -5,7 +5,7 @@ import { sectionIds } from '../../../../utils/utils';
 
 const AboutMe = () => {
     return (
-        <div id={sectionIds.about}>
+        <div className={styles.sectionWrapper} id={sectionIds.about}>
             <div className={styles.content}>
                 <div className={styles.leftContent}>
                     <div className={styles.heading}>About me</div>
