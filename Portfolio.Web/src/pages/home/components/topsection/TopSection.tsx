@@ -1,4 +1,4 @@
-import styles from './TopSection.module.css';
+import styles from './TopSection.module.scss';
 
 const TopSection = () => {
     const jobs = ['servicing', 'maintenence', 'bike builds'];
