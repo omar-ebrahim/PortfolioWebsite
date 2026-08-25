@@ -11,7 +11,7 @@
         inset: -20px;
         background-image:
             linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)),
-            url('../../assets/images/homepage_bike.jpg');
+            url('../../../../assets/images/homepage_bike.jpg');
         background-position: top;
         background-repeat: no-repeat;
         background-size: cover;

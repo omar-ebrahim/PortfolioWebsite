@@ -1,6 +1,6 @@
 import Navbar from '../../components/navbar/Navbar';
 import MiddleSection from './components/middlesection/MiddleSection';
-import TopSection from './components/TopSection';
+import TopSection from './components/topsection/TopSection';
 
 const Home = () => {
     return (
