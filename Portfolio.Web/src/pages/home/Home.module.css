@@ -84,6 +84,10 @@
             padding-left: 0.5rem;
             color: var(--intro-font-secondary);
             text-transform: capitalize;
+
+            @media (max-width: 768px) {
+                padding-left: 0;
+            }
         }
     }
 
