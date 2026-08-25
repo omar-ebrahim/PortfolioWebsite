@@ -18,7 +18,12 @@ const TopSection = () => {
                             </div>
                             <div className={styles.jobItemWrapper}>
                                 {jobs.map((x) => (
-                                    <span className={styles.jobItem}>{x}</span>
+                                    <span
+                                        key={`ji_${x}`}
+                                        className={styles.jobItem}
+                                    >
+                                        {x}
+                                    </span>
                                 ))}
                             </div>
                             <div>
