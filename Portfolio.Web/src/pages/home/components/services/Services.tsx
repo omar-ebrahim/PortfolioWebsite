@@ -4,7 +4,7 @@ import ServiceCard from '../../../../components/service-card/ServiceCard';
 
 const Services = () => {
     return (
-        <div id={sectionIds.services}>
+        <div id={sectionIds.services} className={styles.section}>
             <div className={styles.content}>
                 <div className={styles.leftContent}>
                     <div className={styles.heading}>Services</div>
