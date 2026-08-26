@@ -6,7 +6,7 @@
     "configurations": [
         {
             "type": "node-terminal",
-            "name": "Run Script: dev",
+            "name": "Launch dev",
             "request": "launch",
             "command": "npm run dev",
             "cwd": "${workspaceFolder}/Portfolio.Web"
@@ -37,6 +37,20 @@
             "name": "Run Script: format",
             "request": "launch",
             "command": "npm run format",
+            "cwd": "${workspaceFolder}/Portfolio.Web"
+        },
+        {
+            "type": "node-terminal",
+            "name": "Run Script: storybook",
+            "request": "launch",
+            "command": "npm run storybook",
+            "cwd": "${workspaceFolder}/Portfolio.Web"
+        },
+        {
+            "type": "node-terminal",
+            "name": "Run Script: build storybook",
+            "request": "launch",
+            "command": "npm run build-storybook",
             "cwd": "${workspaceFolder}/Portfolio.Web"
         }
     ]
