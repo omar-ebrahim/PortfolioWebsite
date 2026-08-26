@@ -6,10 +6,15 @@
     "configurations": [
         {
             "type": "node-terminal",
-            "name": "Start dev server",
+            "name": "DEBUG in Chrome",
             "request": "launch",
             "command": "npm run dev",
-            "cwd": "${workspaceFolder}/Portfolio.Web"
+            "cwd": "${workspaceFolder}/Portfolio.Web",
+            "serverReadyAction": {
+                "action": "startDebugging",
+                "name": "Launch dev in Chrome",
+                "pattern": "Local:\\s+(https?://\\S+)"
+            }
         },
         {
             "type": "chrome",
@@ -68,15 +73,5 @@
             "command": "npm run build-storybook",
             "cwd": "${workspaceFolder}/Portfolio.Web"
         }
-    ],
-    "compounds": [
-        {
-            "name": "Launch dev",
-            "configurations": [
-                "Start dev server",
-                "Launch dev in Chrome"
-            ],
-            "stopAll": true
-        },
     ]
 }
