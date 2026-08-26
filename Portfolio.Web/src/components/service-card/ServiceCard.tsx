@@ -5,6 +5,7 @@ interface ServiceCardProps {
     description: string;
     price: number;
     from?: boolean;
+    notes?: string;
 }
 
 const ServiceCard = ({
@@ -12,6 +13,7 @@ const ServiceCard = ({
     description,
     price,
     from = false,
+    notes,
 }: ServiceCardProps) => {
     const formattedPrice = price === 0 ? 'Free' : `£${price.toFixed(2)}`;
     const priceLabel = from ? `From ${formattedPrice}` : formattedPrice;
@@ -19,8 +21,11 @@ const ServiceCard = ({
     return (
         <article className={styles.card}>
             <h3>{title}</h3>
-            <p>{description}</p>
-            <h5>{priceLabel}</h5>
+            <div className={styles.description}>
+                <p>{description}</p>
+                {notes && <sub className={styles.notes}>{notes}</sub>}
+                <h5 className={styles.price}>{priceLabel}</h5>
+            </div>
         </article>
     );
 };

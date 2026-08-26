@@ -10,10 +10,16 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+const title = 'Basic service';
+const description =
+    'Brakes, tyres and gears.\nGeneral health and safety check included.';
+
 export const Primary: Story = {
     args: {
-        description: 'hello world',
-        price: 1234,
-        title: 'something',
+        description,
+        price: 45,
+        title,
+        from: true,
+        notes: 'Price does not include replacement parts',
     },
 };

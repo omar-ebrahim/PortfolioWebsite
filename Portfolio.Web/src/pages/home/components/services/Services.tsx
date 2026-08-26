@@ -13,7 +13,7 @@ const Services = () => {
                 <div className={styles.rightContent}>
                     <ServiceCard
                         title="Health check"
-                        description={`M-check - brakes, tyres, frame, gears.\nEstimate of cost.`}
+                        description={`M-check - brakes, tyres, frame, gears. Estimate of cost of any repairs.`}
                         price={0}
                     />
                     <ServiceCard
@@ -21,6 +21,7 @@ const Services = () => {
                         description="Brakes, gear indexing, seat post and saddle setting, tyres"
                         price={30}
                         from
+                        notes="This does not include parts"
                     />
                     <ServiceCard
                         description="something"
