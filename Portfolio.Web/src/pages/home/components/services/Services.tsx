@@ -1,6 +1,6 @@
 import styles from './Services.module.scss';
 import { sectionIds } from '../../../../utils/utils';
-import ServiceCard from './components/service-card/ServiceCard';
+import ServiceCard from '../../../../components/service-card/ServiceCard';
 
 const Services = () => {
     return (
