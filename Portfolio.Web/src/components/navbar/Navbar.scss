@@ -1,4 +1,4 @@
-@use 'styles/theme' as theme;
+@use '../../styles/theme' as theme;
 
 .navbar {
     height: theme.$navbar-height;
@@ -106,6 +106,12 @@
     height: 3px;
     background-color: var(--color-logo);
     transition: 0.5s;
+}
+
+@media screen and (min-width: theme.$mobile-breakpoint) {
+    .nav-links li.selected-section {
+        border-bottom-color: var(--color-accent-border);
+    }
 }
 
 /* Mobile styles */
