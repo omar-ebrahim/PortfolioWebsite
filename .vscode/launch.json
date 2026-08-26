@@ -6,9 +6,29 @@
     "configurations": [
         {
             "type": "node-terminal",
-            "name": "Run Script: dev",
+            "name": "DEBUG in Chrome",
             "request": "launch",
             "command": "npm run dev",
+            "cwd": "${workspaceFolder}/Portfolio.Web",
+            "serverReadyAction": {
+                "action": "startDebugging",
+                "name": "Launch dev in Chrome",
+                "pattern": "Local:\\s+(https?://\\S+)"
+            }
+        },
+        {
+            "type": "chrome",
+            "name": "Launch dev in Chrome",
+            "request": "launch",
+            "url": "http://localhost:5173",
+            "webRoot": "${workspaceFolder}/Portfolio.Web",
+            "sourceMaps": true
+        },
+        {
+            "type": "node-terminal",
+            "name": "Launch dev in default browser",
+            "request": "launch",
+            "command": "npm run dev -- --open",
             "cwd": "${workspaceFolder}/Portfolio.Web"
         },
         {
@@ -37,6 +57,20 @@
             "name": "Run Script: format",
             "request": "launch",
             "command": "npm run format",
+            "cwd": "${workspaceFolder}/Portfolio.Web"
+        },
+        {
+            "type": "node-terminal",
+            "name": "Run Script: storybook",
+            "request": "launch",
+            "command": "npm run storybook",
+            "cwd": "${workspaceFolder}/Portfolio.Web"
+        },
+        {
+            "type": "node-terminal",
+            "name": "Run Script: build storybook",
+            "request": "launch",
+            "command": "npm run build-storybook",
             "cwd": "${workspaceFolder}/Portfolio.Web"
         }
     ]

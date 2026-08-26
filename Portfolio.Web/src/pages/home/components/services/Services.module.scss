@@ -1,11 +1,14 @@
-@use '../../../../styles/theme' as theme;
+@use 'styles/theme' as theme;
+
+.section {
+    scroll-margin-top: theme.$navbar-height;
+}
 
 .heading {
     padding: 0rem 5rem 2rem 0rem;
     color: var(--font-header);
     font-size: 48px;
     font-weight: 700;
-    scroll-margin-top: theme.$navbar-height;
 }
 
 .content {
