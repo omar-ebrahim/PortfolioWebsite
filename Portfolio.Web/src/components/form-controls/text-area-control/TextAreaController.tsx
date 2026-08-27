@@ -73,9 +73,9 @@ const TextAreaController = <
                             }
                             style={{ height: `${height}px` }}
                         />
-                        {error && (
-                            <sub className={styles.error}>{error.message}</sub>
-                        )}
+                        <sub className={styles.errorMessage}>
+                            {error?.message ?? ''}
+                        </sub>
                     </>
                 );
             }}

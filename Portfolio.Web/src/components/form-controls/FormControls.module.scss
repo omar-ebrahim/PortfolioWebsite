@@ -1,5 +1,7 @@
 .field {
+    min-height: 40px;
     border-radius: 0;
+    box-sizing: border-box;
     border: 1px solid var(--intro-font-secondary);
     padding: 8px;
     width: 100%;
@@ -9,6 +11,15 @@
 
 .field.error {
     border: 1px solid red;
+}
+
+.errorMessage {
+    display: block;
+    min-height: 1.25rem;
+    margin-top: 0.25rem;
+    color: var(--color-accent);
+    font-size: small;
+    line-height: 1.25rem;
 }
 
 .buttonPrimary {

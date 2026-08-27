@@ -60,9 +60,9 @@ const TextController = <
                                     : undefined
                             }
                         />
-                        {error && (
-                            <sub className={styles.error}>{error.message}</sub>
-                        )}
+                        <sub className={styles.errorMessage}>
+                            {error?.message ?? ''}
+                        </sub>
                     </>
                 );
             }}
