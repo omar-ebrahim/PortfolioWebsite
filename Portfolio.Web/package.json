@@ -43,6 +43,7 @@
         "eslint-plugin-storybook": "^10.5.10",
         "vitest": "4.1.11",
         "@vitest/browser-playwright": "4.1.11",
-        "playwright": "latest"
+        "playwright": "latest",
+        "sass-embedded": "1.80.0"
     }
 }
