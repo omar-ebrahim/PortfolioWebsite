@@ -1,0 +1,49 @@
+.field {
+    min-height: 40px;
+    border-radius: 0;
+    box-sizing: border-box;
+    border: 1px solid var(--intro-font-secondary);
+    padding: 8px;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+}
+
+.field.error {
+    border: 1px solid red;
+}
+
+.errorMessage {
+    display: block;
+    min-height: 1.25rem;
+    margin-top: 0.25rem;
+    color: var(--color-accent);
+    font-size: small;
+    line-height: 1.25rem;
+}
+
+.buttonPrimary {
+    border-radius: 0;
+    width: fit-content;
+    border: none;
+    padding: 8px;
+    background-color: var(--intro-font-secondary);
+
+    &:disabled {
+        background-color: gray;
+    }
+}
+
+.buttonSecondary {
+    border-radius: 0;
+    width: fit-content;
+    border: none;
+    padding: 8px;
+    background-color: gray;
+    color: white;
+}
+
+sub.error {
+    color: var(--color-accent);
+    font-size: small;
+}

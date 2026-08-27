@@ -1,10 +1,6 @@
 import { useEffect, useState } from 'react';
 import './Navbar.scss';
-import {
-    navigateToSection,
-    sectionIds,
-    type SectionId,
-} from '../../utils/utils';
+import { navigateToSection, type SectionId } from '../../utils/utils';
 
 interface NavbarLink {
     name: string;
@@ -35,29 +31,17 @@ const Navbar = () => {
         };
     }, []);
 
-    const [selectedSection, setSelectedSection] = useState<SectionId>(
-        sectionIds.home,
-    );
-
     return (
         <nav className="navbar">
             <div className="navbar-container">
                 <h1 className="logo">Route26 Cycle Repair</h1>
                 <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
                     {navLinks.map((link) => (
-                        <li
-                            key={link.name}
-                            className={
-                                selectedSection === link.sectionId
-                                    ? 'selected-section'
-                                    : ''
-                            }
-                        >
+                        <li key={link.name}>
                             <span
                                 onClick={() => {
                                     navigateToSection(link.sectionId);
                                     resetMenu();
-                                    setSelectedSection(link.sectionId);
                                 }}
                             >
                                 {link.name}

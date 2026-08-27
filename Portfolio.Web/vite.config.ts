@@ -34,9 +34,6 @@ export default defineConfig({
             presets: [reactCompilerPreset()],
         }),
     ],
-    server: {
-        open: true,
-    },
     test: {
         projects: [
             {

@@ -1,0 +1,106 @@
+@use 'styles/theme' as theme;
+
+.contactForm {
+    width: 100%;
+    min-width: 0;
+    padding: var(--space-md);
+    box-sizing: border-box;
+
+    color: var(--font-body);
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.formFieldSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.formField {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    min-width: 0;
+}
+
+@media screen and (max-width: theme.$mobile-breakpoint) {
+    .formFieldSection {
+        flex-direction: column;
+    }
+
+    .formButtons {
+        justify-content: stretch;
+    }
+
+    .buttonPrimary,
+    .buttonSecondary {
+        flex: 1;
+    }
+}
+
+.formButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.buttonPrimary,
+.buttonSecondary {
+    min-height: 44px;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color 160ms ease,
+        border-color 160ms ease,
+        color 160ms ease;
+}
+
+.buttonPrimary {
+    color: #111;
+    background-color: var(--intro-font-secondary);
+}
+
+.buttonPrimary:hover:not(:disabled) {
+    background-color: white;
+}
+
+.buttonPrimary:disabled {
+    color: rgba(255, 255, 255, 0.55);
+    background-color: rgba(255, 255, 255, 0.16);
+    cursor: not-allowed;
+}
+
+.buttonSecondary {
+    color: white;
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.buttonSecondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+
+.buttonPrimary:focus-visible,
+.buttonSecondary:focus-visible {
+    outline: 2px solid var(--intro-font-secondary);
+    outline-offset: 3px;
+}
+
+::placeholder {
+    color: rgba(179, 176, 176, 1);
+}
