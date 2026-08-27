@@ -108,12 +108,6 @@
     transition: 0.5s;
 }
 
-@media screen and (min-width: theme.$mobile-breakpoint) {
-    .nav-links li.selected-section {
-        border-bottom-color: var(--color-accent-border);
-    }
-}
-
 /* Mobile styles */
 @media screen and (max-width: theme.$mobile-breakpoint) {
     .nav-links {
