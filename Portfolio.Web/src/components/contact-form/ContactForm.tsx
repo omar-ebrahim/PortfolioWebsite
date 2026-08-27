@@ -1,6 +1,5 @@
 import { useForm, type SubmitHandler } from 'react-hook-form';
 import styles from './ContactForm.module.scss';
-import formStyles from '../form-controls/FormControls.module.scss';
 import TextController from '../form-controls/text-control/TextController';
 import EmailController from '../form-controls/email-control/EmailController';
 import TextAreaController from '../form-controls/text-area-control/TextAreaController';
@@ -81,17 +80,20 @@ const ContactForm = () => {
                 </div>
             </div>
             <div className={styles.formButtons}>
-                <input
-                    className={formStyles.buttonSecondary}
+                <button
+                    className={styles.buttonSecondary}
                     type="button"
                     onClick={() => reset(defaultValues)}
-                    value="Reset"
-                />
-                <input
-                    className={formStyles.buttonPrimary}
+                >
+                    Clear form
+                </button>
+                <button
+                    className={styles.buttonPrimary}
                     type="submit"
                     disabled={!isValid}
-                />
+                >
+                    Send message
+                </button>
             </div>
         </form>
     );

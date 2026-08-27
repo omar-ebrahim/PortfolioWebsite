@@ -34,13 +34,70 @@
     .formFieldSection {
         flex-direction: column;
     }
+
+    .formButtons {
+        justify-content: stretch;
+    }
+
+    .buttonPrimary,
+    .buttonSecondary {
+        flex: 1;
+    }
 }
 
 .formButtons {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    gap: 1rem;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.buttonPrimary,
+.buttonSecondary {
+    min-height: 44px;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color 160ms ease,
+        border-color 160ms ease,
+        color 160ms ease;
+}
+
+.buttonPrimary {
+    color: #111;
+    background-color: var(--intro-font-secondary);
+}
+
+.buttonPrimary:hover:not(:disabled) {
+    background-color: white;
+}
+
+.buttonPrimary:disabled {
+    color: rgba(255, 255, 255, 0.55);
+    background-color: rgba(255, 255, 255, 0.16);
+    cursor: not-allowed;
+}
+
+.buttonSecondary {
+    color: white;
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.buttonSecondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+
+.buttonPrimary:focus-visible,
+.buttonSecondary:focus-visible {
+    outline: 2px solid var(--intro-font-secondary);
+    outline-offset: 3px;
 }
 
 ::placeholder {
