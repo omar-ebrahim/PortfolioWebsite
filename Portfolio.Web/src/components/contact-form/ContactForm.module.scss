@@ -1,0 +1,48 @@
+@use 'styles/theme' as theme;
+
+.contactForm {
+    width: 100%;
+    min-width: 0;
+    padding: var(--space-md);
+    box-sizing: border-box;
+
+    color: var(--font-body);
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.formFieldSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.formField {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+@media screen and (max-width: theme.$mobile-breakpoint) {
+    .formFieldSection {
+        flex-direction: column;
+    }
+}
+
+.formButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+::placeholder {
+    color: rgba(179, 176, 176, 1);
+}
