@@ -3,7 +3,7 @@ import Home from './pages/home/Home';
 
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/PortfolioWebsite">
             <main>
                 <Routes>
                     <Route path="/" element={<Home />} />
