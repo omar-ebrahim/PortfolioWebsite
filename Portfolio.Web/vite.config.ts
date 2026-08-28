@@ -14,8 +14,8 @@ const dirname =
         : path.dirname(fileURLToPath(import.meta.url));
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
-export default defineConfig({
-    base: '/PortfolioWebsite/',
+export default defineConfig(({ mode }) => ({
+    base: mode === 'development' ? '/' : '/PortfolioWebsite/',
     resolve: {
         alias: {
             '@': path.resolve(__dirname, 'src'),
@@ -61,4 +61,4 @@ export default defineConfig({
             },
         ],
     },
-});
+}));
