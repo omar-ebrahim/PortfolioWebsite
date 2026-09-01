@@ -26,6 +26,25 @@
         },
         {
             "type": "node-terminal",
+            "name": "DEBUG in Firefox",
+            "request": "launch",
+            "command": "npm run dev",
+            "cwd": "${workspaceFolder}/Portfolio.Web",
+            "serverReadyAction": {
+                "action": "startDebugging",
+                "name": "Launch dev in Firefox",
+                "pattern": "Local:\\s+(https?://\\S+)"
+            }
+        },
+        {
+            "type": "firefox",
+            "name": "Launch dev in Firefox",
+            "request": "launch",
+            "url": "http://localhost:5173",
+            "webRoot": "${workspaceFolder}/Portfolio.Web",
+        },
+        {
+            "type": "node-terminal",
             "name": "Launch dev in default browser",
             "request": "launch",
             "command": "npm run dev -- --open",
