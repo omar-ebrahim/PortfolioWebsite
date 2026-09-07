@@ -1,13 +1,17 @@
 import styles from './Services.module.scss';
+import { useEffect, useState } from 'react';
 import { sectionIds } from '../../../../utils/utils';
 import ServiceCard from '../../../../components/service-card/ServiceCard';
+import { fetchServices } from '../../../../sanity/client';
 import type { ServiceContent } from '../../../../sanity/content';
 
-interface ServicesProps {
-    services: ServiceContent[];
-}
+const Services = () => {
+    const [services, setServices] = useState<ServiceContent[]>([]);
 
-const Services = ({ services }: ServicesProps) => {
+    useEffect(() => {
+        fetchServices().then(setServices);
+    }, []);
+
     return (
         <div id={sectionIds.services} className={styles.section}>
             <div className={styles.content}>
