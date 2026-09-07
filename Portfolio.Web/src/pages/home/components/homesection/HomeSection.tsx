@@ -1,9 +1,15 @@
 import { navigateToSection, sectionIds } from '../../../../utils/utils';
+import type { TopSectionContent } from '../../../../sanity/content';
 import styles from './HomeSection.module.scss';
 
-const TopSection = () => {
-    const jobs = ['servicing', 'maintenence', 'bike builds'];
-    const name = 'Omar';
+interface HomeSectionProps {
+    content: TopSectionContent | null;
+}
+
+const TopSection = ({ content }: HomeSectionProps) => {
+    if (!content) {
+        return null;
+    }
 
     return (
         <div id={sectionIds.home} className={styles.topSection}>
@@ -14,10 +20,10 @@ const TopSection = () => {
                             <div className={styles.salutation}>Hi there,</div>
                             <div className={styles.nameWrapper}>
                                 <span>I am</span>
-                                <span className={styles.name}>{name}</span>
+                                <span className={styles.name}>{content.name}</span>
                             </div>
                             <div className={styles.jobItemWrapper}>
-                                {jobs.map((x) => (
+                                {content.jobs.map((x) => (
                                     <span
                                         key={`ji_${x}`}
                                         className={styles.jobItem}

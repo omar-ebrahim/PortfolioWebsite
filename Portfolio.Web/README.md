@@ -1,75 +1,18 @@
-# React + TypeScript + Vite
+# Portfolio Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Vite frontend for the portfolio site. Content is read from the Sanity project configured in `../Portfolio.Web.Studio`.
 
-Currently, two official plugins are available:
+## Local setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. Copy `.env.example` to `.env` and set `VITE_SANITY_PROJECT_ID` and `VITE_SANITY_DATASET`.
+2. Install dependencies with `npm install`.
+3. Start the frontend with `npm run dev`.
+4. Start the Studio separately from `../Portfolio.Web.Studio` with `npm run dev`.
 
-## React Compiler
+The frontend uses Sanity's public read API and does not require a token. It falls back to the existing local content when the API is unavailable or no matching documents have been published.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Allow the local browser origin once per Sanity project with `npx sanity cors add http://localhost:5173` from `Portfolio.Web.Studio`. Add the deployed frontend origin in the same way before production use.
 
-Note: This will impact Vite dev & build performances.
+## Content documents
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-    globalIgnores(['dist']),
-    {
-        files: ['**/*.{ts,tsx}'],
-        extends: [
-            // Other configs...
-
-            // Remove tseslint.configs.recommended and replace with this
-            tseslint.configs.recommendedTypeChecked,
-            // Alternatively, use this for stricter rules
-            tseslint.configs.strictTypeChecked,
-            // Optionally, add this for stylistic rules
-            tseslint.configs.stylisticTypeChecked,
-
-            // Other configs...
-        ],
-        languageOptions: {
-            parserOptions: {
-                project: ['./tsconfig.node.json', './tsconfig.app.json'],
-                tsconfigRootDir: import.meta.dirname,
-            },
-            // other options...
-        },
-    },
-]);
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
-
-export default defineConfig([
-    globalIgnores(['dist']),
-    {
-        files: ['**/*.{ts,tsx}'],
-        extends: [
-            // Other configs...
-            // Enable lint rules for React
-            reactX.configs['recommended-typescript'],
-            // Enable lint rules for React DOM
-            reactDom.configs.recommended,
-        ],
-        languageOptions: {
-            parserOptions: {
-                project: ['./tsconfig.node.json', './tsconfig.app.json'],
-                tsconfigRootDir: import.meta.dirname,
-            },
-            // other options...
-        },
-    },
-]);
-```
+Create and publish one `Top Section` document to control the name and job list. Create and publish `Service Type` documents to control the service cards. Service descriptions are authored as Portable Text in Studio and rendered as plain text by the frontend query.

@@ -1,4 +1,4 @@
-import { defineField, defineType } from "sanity";
+import { defineField, defineType } from 'sanity';
 
 const ServiceType = defineType({
     name: 'serviceType',
@@ -8,7 +8,7 @@ const ServiceType = defineType({
         {
             name: 'pricing',
             title: 'Pricing',
-            options: {columns: 2},
+            options: { columns: 2 },
         },
     ],
     fields: [
@@ -17,15 +17,23 @@ const ServiceType = defineType({
             title: 'Title',
             type: 'string',
             description: 'Maximum 100 characters.',
-            validation: Rule => Rule.required().max(100).error('Title is required and must not exceed 100 characters.'),
-
+            validation: (Rule) =>
+                Rule.required()
+                    .max(100)
+                    .error(
+                        'Title is required and must not exceed 100 characters.',
+                    ),
         }),
         defineField({
             title: 'Description',
             name: 'description',
             type: 'array',
             of: [{ type: 'block' }],
-            validation: Rule => Rule.required().error('Description is required.').min(1).error('Description must have at least one block.'),
+            validation: (Rule) =>
+                Rule.required()
+                    .error('Description is required.')
+                    .min(1)
+                    .error('Description must have at least one block.'),
         }),
         defineField({
             name: 'currency',
@@ -40,20 +48,22 @@ const ServiceType = defineType({
             },
             initialValue: 'GBP',
             fieldset: 'pricing',
-            validation: Rule => Rule.required().error('Currency is required.'),
+            validation: (Rule) =>
+                Rule.required().error('Currency is required.'),
         }),
         defineField({
             name: 'price',
             title: 'Price',
             type: 'number',
             fieldset: 'pricing',
-            validation: Rule => Rule.required().error('Price is required.'),
+            validation: (Rule) => Rule.required().error('Price is required.'),
         }),
         defineField({
             name: 'isFrom',
             title: 'Is From',
             type: 'boolean',
-            description: 'Indicates whether the service is from the given price or not. Left unticked if the price is fixed.',
+            description:
+                'Indicates whether the service is from the given price or not. Left unticked if the price is fixed.',
             initialValue: false,
         }),
         defineField({
@@ -61,9 +71,10 @@ const ServiceType = defineType({
             title: 'Notes',
             type: 'string',
             description: 'Additional notes or disclaimers about the service.',
-            validation: Rule => Rule.max(200).error('Notes must not exceed 200 characters.'),
-        })
-    ]
+            validation: (Rule) =>
+                Rule.max(200).error('Notes must not exceed 200 characters.'),
+        }),
+    ],
 });
 
 export default ServiceType;

@@ -1,18 +1,18 @@
-import {defineConfig} from 'sanity'
-import {structureTool} from 'sanity/structure'
-import {visionTool} from '@sanity/vision'
-import {schemaTypes} from './schemaTypes'
+import { defineConfig } from 'sanity';
+import { structureTool } from 'sanity/structure';
+import { visionTool } from '@sanity/vision';
+import { schemaTypes } from './schemaTypes';
 
 export default defineConfig({
-  name: 'default',
-  title: 'ReactDemoWebsite',
+    name: 'default',
+    title: 'ReactDemoWebsite',
 
-  projectId: 'ihs7c0xz',
-  dataset: 'production',
+    projectId: 'ihs7c0xz',
+    dataset: 'production',
 
-  plugins: [structureTool(), visionTool()],
+    plugins: [structureTool(), visionTool()],
 
-  schema: {
-    types: schemaTypes,
-  },
-})
+    schema: {
+        types: schemaTypes,
+    },
+});

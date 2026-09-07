@@ -1,4 +1,4 @@
-import { defineType } from "sanity";
+import { defineType } from 'sanity';
 
 const TopSection = defineType({
     name: 'topSection',
