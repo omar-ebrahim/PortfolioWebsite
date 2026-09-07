@@ -2,6 +2,8 @@
 
 .section {
     scroll-margin-top: theme.$navbar-height;
+    max-width: 2000px;
+    margin: 0 auto;
 }
 
 .heading {
@@ -30,7 +32,7 @@
     width: 70%;
     display: grid;
     grid-template-columns: repeat(2, minmax(min(250px, 100%), 350px));
-    justify-content: center;
+    justify-content: right;
     gap: 1.5rem;
     padding-right: 2rem;
     box-sizing: border-box;

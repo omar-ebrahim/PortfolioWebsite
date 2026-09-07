@@ -3,6 +3,8 @@
 .sectionWrapper {
     scroll-margin-top: theme.$navbar-height;
     min-height: 200px;
+    max-width: 2000px;
+    margin: 0 auto;
 }
 
 .heading {
@@ -27,8 +29,8 @@
 .rightContent {
     width: 40%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
+    align-items: right;
 }
 
 @media (max-width: theme.$mobile-breakpoint) {
@@ -48,10 +50,20 @@
         box-sizing: border-box;
         padding: 0 2rem 1rem;
     }
+
+    .rightContent .glyph {
+        padding-bottom: 2rem;
+        max-width: 250px;
+        max-height: 250px;
+        margin: 0 auto;
+    }
 }
 
 .glyph {
     color: var(--intro-font-secondary);
-    margin: 0 auto;
     padding-bottom: 4rem;
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
 }

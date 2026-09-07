@@ -47,7 +47,7 @@
 
 .topSectionContent {
     height: 100%;
-    width: 70%;
+    width: 100%;
     min-width: 0;
 
     @media screen and (max-width: theme.$mobile-breakpoint) {
@@ -69,10 +69,12 @@
 }
 
 .introWrapper {
+    max-width: 2000px;
     box-sizing: border-box;
     height: 100%;
+    width: 100%;
     display: grid;
-    margin: 0;
+    margin: 0 auto;
     padding: 3em 5em;
     grid-template-rows: 1fr 3fr 1fr auto;
 
