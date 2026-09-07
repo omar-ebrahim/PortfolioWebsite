@@ -13,28 +13,31 @@
 }
 
 .content {
-    padding-top: 2rem;
+    padding: 2rem 2rem 0 5rem;
     color: var(--font-body);
     display: flex;
+    flex-direction: column;
     width: 100%;
+    box-sizing: border-box;
     white-space: pre-line;
 }
 
-.leftContent {
-    padding: 1rem 2rem 1rem 5rem;
-    width: 30%;
+.topContent {
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
 }
 
-.rightContent {
-    width: 70%;
+.bottomContent {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, minmax(min(250px, 100%), 350px));
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(250px, 100%), 1fr)
+    );
     justify-content: center;
     gap: 1.5rem;
-    padding-right: 2rem;
-    box-sizing: border-box;
+    padding-bottom: 2rem;
 }
 
 @media (max-width: theme.$mobile-breakpoint) {
@@ -43,24 +46,18 @@
     }
 
     .content {
-        padding-top: 0;
-        flex-direction: column;
-        width: 100%;
-        padding-bottom: 2rem;
+        padding: 0 2rem;
     }
 
-    .rightContent {
-        width: 100%;
-        grid-template-columns: minmax(0, 350px);
+    .bottomContent {
+        grid-template-columns: minmax(0, 500px);
         justify-content: center;
         column-gap: 0;
-        padding: 0;
     }
 
-    .leftContent {
-        width: 100%;
+    .topContent {
         max-width: 100%;
         box-sizing: border-box;
-        padding: 0 2rem 1rem;
+        padding: 0 0 1rem;
     }
 }

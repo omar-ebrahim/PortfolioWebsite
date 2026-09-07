@@ -15,7 +15,7 @@ const Services = () => {
     return (
         <div id={sectionIds.services} className={styles.section}>
             <div className={styles.content}>
-                <div className={styles.leftContent}>
+                <div className={styles.topContent}>
                     <div className={styles.heading}>Services</div>
                     <div>Contact me for more details</div>
                     <div>
@@ -23,7 +23,7 @@ const Services = () => {
                         cannot carry out carbon frame inspections.
                     </div>
                 </div>
-                <div className={styles.rightContent}>
+                <div className={styles.bottomContent}>
                     {services.map((service) => (
                         <ServiceCard key={service._id} {...service} />
                     ))}
