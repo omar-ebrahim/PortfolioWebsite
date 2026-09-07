@@ -35,7 +35,7 @@
     display: grid;
     grid-template-columns: repeat(
         auto-fit,
-        minmax(min(350px, 100%), 1fr)
+        minmax(min(450px, 100%), 1fr)
     );
     justify-content: center;
     gap: 1.5rem;

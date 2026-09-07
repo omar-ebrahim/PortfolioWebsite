@@ -2,8 +2,6 @@
 
 .card {
     width: 100%;
-    max-width: 500px;
-    min-width: 350px;
     min-height: 180px;
     padding: var(--space-md);
     box-sizing: border-box;
@@ -54,4 +52,10 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+}
+
+.description ul {
+    padding-inline-start: 1.5rem;
+    margin-block: 0.5rem;
+    list-style-position: outside;
 }

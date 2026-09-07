@@ -1,8 +1,10 @@
 import styles from './ServiceCard.module.scss';
+import { PortableText } from '@portabletext/react';
+import type { PortableTextBlock } from '@portabletext/types';
 
 interface ServiceCardProps {
     title: string;
-    description: string;
+    description: PortableTextBlock[];
     price: number;
     from?: boolean;
     notes?: string;
@@ -22,7 +24,7 @@ const ServiceCard = ({
         <article className={styles.card}>
             <h3>{title}</h3>
             <div className={styles.description}>
-                <p>{description}</p>
+                <PortableText value={description} />
                 {notes && <sub className={styles.notes}>{notes}</sub>}
                 <h5 className={styles.price}>{priceLabel}</h5>
             </div>

@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import type { PortableTextBlock } from '@portabletext/types';
 
 import ServiceCard from './ServiceCard';
 
@@ -11,8 +12,22 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const title = 'Basic service';
-const description =
-    'Brakes, tyres and gears.\nGeneral health and safety check included.';
+const description: PortableTextBlock[] = [
+    {
+        _key: 'description',
+        _type: 'block',
+        children: [
+            {
+                _key: 'description-span',
+                _type: 'span',
+                marks: [],
+                text: 'Brakes, tyres and gears. General health and safety check included.',
+            },
+        ],
+        markDefs: [],
+        style: 'normal',
+    },
+];
 
 export const Primary: Story = {
     args: {

@@ -22,7 +22,7 @@ const topSectionQuery = /* groq */ `*[_type == "topSection"][0]{name, jobs}`;
 const servicesQuery = /* groq */ `*[_type == "serviceType"] | order(_createdAt asc){
     _id,
     title,
-    "description": pt::text(description),
+    description,
     price,
     "from": isFrom,
     notes

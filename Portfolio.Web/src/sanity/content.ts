@@ -8,7 +8,7 @@ export interface TopSectionContent {
 export interface ServiceContent {
     _id: string;
     title: string;
-    description: string;
+    description: PortableTextBlock[];
     price: number;
     from?: boolean;
     notes?: string;
