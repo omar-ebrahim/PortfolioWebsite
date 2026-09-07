@@ -7,26 +7,32 @@ import Services from './components/services/Services';
 import {
     type ServiceContent,
     type TopSectionContent,
-    type AboutMeContent
+    type AboutMeContent,
 } from '../../sanity/content';
-import { fetchAboutMe, fetchServices, fetchTopSection } from '../../sanity/client';
+import {
+    fetchAboutMe,
+    fetchServices,
+    fetchTopSection,
+} from '../../sanity/client';
 
 const Home = () => {
-    const [topSection, setTopSection] = useState<TopSectionContent | null>(null);
+    const [topSection, setTopSection] = useState<TopSectionContent | null>(
+        null,
+    );
     const [services, setServices] = useState<ServiceContent[]>([]);
     const [aboutMe, setAboutMe] = useState<AboutMeContent | null>(null);
 
     useEffect(() => {
         let isMounted = true;
 
-        Promise.all([fetchTopSection(), fetchServices(), fetchAboutMe()]).then(([topSectionResults, servicesResults, aboutMeResults]) => {
-            if (!isMounted) return;
-            if (topSectionResults) setTopSection(topSectionResults);
-            if (servicesResults.length > 0) setServices(servicesResults);
-            if (aboutMeResults) setAboutMe(aboutMeResults);
-
-            console.log({ aboutMeResults })
-        });
+        Promise.all([fetchTopSection(), fetchServices(), fetchAboutMe()]).then(
+            ([topSectionResults, servicesResults, aboutMeResults]) => {
+                if (!isMounted) return;
+                if (topSectionResults) setTopSection(topSectionResults);
+                if (servicesResults.length > 0) setServices(servicesResults);
+                if (aboutMeResults) setAboutMe(aboutMeResults);
+            },
+        );
 
         return () => {
             isMounted = false;
@@ -37,7 +43,7 @@ const Home = () => {
         <>
             <Navbar />
             {topSection && <HomeSection content={topSection} />}
-            <AboutMe content={aboutMe} />
+            {aboutMe && <AboutMe content={aboutMe} />}
             <Services services={services} />
             <ContactMe />
         </>

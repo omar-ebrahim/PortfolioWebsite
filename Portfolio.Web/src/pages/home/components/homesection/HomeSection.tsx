@@ -20,7 +20,9 @@ const TopSection = ({ content }: HomeSectionProps) => {
                             <div className={styles.salutation}>Hi there,</div>
                             <div className={styles.nameWrapper}>
                                 <span>I am</span>
-                                <span className={styles.name}>{content.name}</span>
+                                <span className={styles.name}>
+                                    {content.name}
+                                </span>
                             </div>
                             <div className={styles.jobItemWrapper}>
                                 {content.jobs.map((x) => (
