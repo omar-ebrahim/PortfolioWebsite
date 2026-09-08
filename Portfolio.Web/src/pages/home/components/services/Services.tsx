@@ -2,8 +2,8 @@ import styles from './Services.module.scss';
 import { useEffect, useState } from 'react';
 import { sectionIds } from '../../../../utils/utils';
 import ServiceCard from '../../../../components/service-card/ServiceCard';
-import { fetchServices } from '../../../../sanity/client';
 import type { ServiceContent } from '../../../../sanity/content';
+import { fetchServices } from '../../../../sanity/api/services';
 
 const Services = () => {
     const [services, setServices] = useState<ServiceContent[]>([]);

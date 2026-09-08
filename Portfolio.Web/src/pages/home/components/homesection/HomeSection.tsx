@@ -1,8 +1,8 @@
 import { navigateToSection, sectionIds } from '../../../../utils/utils';
 import styles from './HomeSection.module.scss';
-import { fetchTopSection } from '../../../../sanity/client';
 import { useEffect, useState } from 'react';
 import type { TopSectionContent } from '../../../../sanity/content';
+import { fetchTopSection } from '../../../../sanity/api/top-section';
 
 const TopSection = () => {
 
