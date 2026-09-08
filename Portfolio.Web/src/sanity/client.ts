@@ -37,7 +37,8 @@ export async function fetchTopSection(): Promise<TopSectionContent | null> {
         return await sanityClient.fetch<TopSectionContent | null>(
             topSectionQuery,
         );
-    } catch {
+    } catch (error) {
+        console.error('Error fetching top section content:', error);
         return null;
     }
 }
@@ -47,7 +48,8 @@ export async function fetchServices(): Promise<ServiceContent[]> {
 
     try {
         return await sanityClient.fetch<ServiceContent[]>(servicesQuery);
-    } catch {
+    } catch (error) {
+        console.error('Error fetching services content:', error);
         return [];
     }
 }
@@ -57,7 +59,8 @@ export async function fetchAboutMe(): Promise<AboutMeContent | null> {
 
     try {
         return await sanityClient.fetch<AboutMeContent | null>(aboutMeQuery);
-    } catch {
+    } catch (error) {
+        console.error('Error fetching about me content:', error);
         return null;
     }
 }
