@@ -63,6 +63,9 @@
     color: var(--color-logo);
     font-weight: bold;
     text-transform: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .nav-links {
