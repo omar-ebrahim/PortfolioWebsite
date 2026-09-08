@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './Navbar.scss';
 import { navigateToSection, type SectionId } from '../../utils/utils';
+import Bicycle from '../glyphs/Bicycle';
 
 interface NavbarLink {
     name: string;
@@ -34,7 +35,10 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="navbar-container">
-                <h1 className="logo">Route26 Cycle Repair</h1>
+                <h1 className="logo">
+                    <Bicycle size={32} aria-label="Route 26 Cycle Repair" />
+                    <span>Route26 Cycle Repair</span>
+                </h1>
                 <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
                     {navLinks.map((link) => (
                         <li key={link.name}>
