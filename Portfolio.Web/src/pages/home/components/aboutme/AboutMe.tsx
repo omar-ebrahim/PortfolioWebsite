@@ -2,9 +2,9 @@ import styles from './AboutMe.module.scss';
 import { PortableText } from '@portabletext/react';
 import Bicycle from '../../../../components/glyphs/Bicycle';
 import { sectionIds } from '../../../../utils/utils';
-import { fetchAboutMe } from '../../../../sanity/client';
 import { useEffect, useState } from 'react';
 import type { AboutMeContent } from '../../../../sanity/content';
+import { fetchAboutMe } from '../../../../sanity/api/about-me';
 
 const AboutMe = () => {
 
