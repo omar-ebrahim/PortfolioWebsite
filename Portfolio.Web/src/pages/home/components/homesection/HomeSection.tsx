@@ -1,9 +1,17 @@
 import { navigateToSection, sectionIds } from '../../../../utils/utils';
 import styles from './HomeSection.module.scss';
+import { fetchTopSection } from '../../../../sanity/client';
+import { useEffect, useState } from 'react';
+import type { TopSectionContent } from '../../../../sanity/content';
 
 const TopSection = () => {
-    const jobs = ['servicing', 'maintenence', 'bike builds'];
-    const name = 'Omar';
+
+    const [content, setContent] = useState<TopSectionContent | null>(null);
+
+    useEffect(() => {
+        fetchTopSection().then(setContent);
+    }, []);
+
 
     return (
         <div id={sectionIds.home} className={styles.topSection}>
@@ -14,10 +22,12 @@ const TopSection = () => {
                             <div className={styles.salutation}>Hi there,</div>
                             <div className={styles.nameWrapper}>
                                 <span>I am</span>
-                                <span className={styles.name}>{name}</span>
+                                <span className={styles.name}>
+                                    {content?.name}
+                                </span>
                             </div>
                             <div className={styles.jobItemWrapper}>
-                                {jobs.map((x) => (
+                                {content?.jobs.map((x) => (
                                     <span
                                         key={`ji_${x}`}
                                         className={styles.jobItem}
